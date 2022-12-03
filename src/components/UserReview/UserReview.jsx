@@ -11,24 +11,24 @@ function UserReview() {
     
   console.log("comment:", comment)  
 
+const reviewObject = {
+  feeling: feelings,
+  understanding: understanding,
+  support: support,
+  comments: comment
+}
+
     const navigateNext = () => {
-        
-        axios({
-          method: '/POST',
-          url: '/',
-          data: {
-            feeling: feelings,
-            understanding: understanding,
-            support: support,
-            comments: comment,
-          }
-        }).then((response) => {
-          console.log(response);
-          history.push('/SubmitSucces');
-      }).catch((err) => {
-          console.log("UserReview",err);
-      });
-      };
+      history.push('/SubmitSucces');
+      axios.post('/review', reviewObject)   
+    .then(response => {
+      console.log("axios.post", response)
+      
+    }).catch(err => {
+      console.log("axios.post-err", err);
+    })              
+  };
+
 
     return (
       <div>
