@@ -5,7 +5,7 @@ import { HashRouter as Router, Route, Link } from 'react-router-dom';
 import UserFeelings from '../UserFeelings/UserFeelings';
 import UserUnderstanding from '../UserUnderstanding/UserUnderstanding';
 import UserSupport from '../UserSupport/UserSuppport';
-import UserComments from '../UserComments/UserComments';
+import UserComment from '../UserComment/UserComment';
 import UserReview from '../UserReview/UserReview';
 import SubmitSucces from '../SubmitSuccess/SubmitSucces';
 
@@ -24,8 +24,8 @@ function App() {
         <Route exact path="/UserSupport">
           <UserSupport />
         </Route>
-        <Route exact path="/UserComments">
-          <UserComments />
+        <Route exact path="/UserComment">
+          <UserComment />
         </Route>
         <Route exact path="/UserReview">
           <UserReview />

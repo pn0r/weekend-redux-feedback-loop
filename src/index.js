@@ -8,15 +8,45 @@ import { createStore, combineReducers, applyMiddleware } from 'redux';
 import logger from 'redux-logger';
 
 
-const feedBackReducer = (state = [], action) => {
-    console.log('feddbackreducer', action .payload)
+const FeelingsReducer = (state = '', action) => {
+  if (action.type === 'NEW_FEELING') {
+    console.log('feelingReducer', action.payload);
+    return action.payload;
+  }
+    return state;
+} 
+
+const UnderstandingReducer = (state = '', action) => {
+  if (action.type === 'NEW_UNDERSTANDING') {
+    console.log('understandingReducer', action.payload);
+    return action.payload;
+  }
+    return state;
+} 
+
+const SupportReducer = (state = '', action) => {
+  if (action.type === 'NEW_SUPPORT') {
+    console.log('supportReducer', action.payload);
+    return action.payload;
+  }
+    return state;
+} 
+
+const CommentReducer = (state = '', action) => {
+  if (action.type === 'NEW_COMMENT') {
+    console.log('commentReducer', action.payload);
+    return action.payload;
+  }
     return state;
 } 
 
 
 const storeInstance = createStore(
     combineReducers({
-      feedBackReducer
+      FeelingsReducer,
+      SupportReducer,
+      UnderstandingReducer,
+      CommentReducer
     }),
     applyMiddleware(logger)
   );

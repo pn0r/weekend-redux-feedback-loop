@@ -3,32 +3,32 @@ import Header from '../Header/Header';
 import {useState} from 'react';
 import { useDispatch } from 'react-redux';
 
-function UserSupport() {
+function UserComment() {
   const dispatch = useDispatch();
-  const [support, setSupport ] = useState('');
+  const [comment, setComment ] = useState('');
   const history = useHistory();
   const navigateNext = () => {
-    if(support <= 0 || support > 5) {
-      alert('Input must be 1-5')
+    if(comment === '') {
+      alert('Enter a comment')
     }else{
       dispatch({
-        type: 'NEW_SUPPORT',
-        payload: support
+        type: 'NEW_COMMENT',
+        payload: comment
       })
-      history.push('/UserComment');
+      history.push('/UserReview');
     }  
   };
 
     return (
       <div>
         <Header />
-        <div>How well are you being supported?</div>
-        <input type="number" min ="1" max="5"
-        onChange={(event) => setSupport(event.target.value)}>
+        <div>Any comments you want to leave?</div>
+        <input type="text"
+        onChange={(event) => setComment(event.target.value)}>
         </input>
         <button onClick={navigateNext}>Next</button>
       </div>
     )
 }
 
-export default UserSupport;
+export default UserComment;

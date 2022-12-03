@@ -7,7 +7,7 @@ function SubmitSucces() {
       };
     return (
         <div>
-        <div>Review</div>
+        <div>Succes!</div>
         <button onClick={navigateNext}>Leave New Feedback</button>
       </div>
     )
