@@ -19,16 +19,23 @@ function UserComment() {
     }  
   };
 
-    return (
-      <div>
-        <Header />
-        <div>Any comments you want to leave?</div>
-        <input type="text"
-        onChange={(event) => setComment(event.target.value)}>
-        </input>
-        <button onClick={navigateNext}>Next</button>
+  return (
+    <div>
+     <Header />
+      <div className='input-container'>
+        <h1>Any comments you want to leave?</h1>
+          <div className='button-input-container'>
+            <div className='input-box'>
+            <h3>Comments</h3>
+            <input className='input' type="text" min ="1" max="5" 
+            onChange={(event) => setComment(event.target.value)}>
+            </input>
+          </div>
+          <button className='input-button' onClick={navigateNext}>NEXT</button>
+          </div>
       </div>
-    )
+    </div>
+  )
 }
 
 export default UserComment;

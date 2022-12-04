@@ -3,3 +3,98 @@ body {
   padding: 0;
   font-family: sans-serif;
 }
+
+.input-container {
+  border-bottom: 2px solid lightgrey;
+  border-right: 2px solid lightgrey;
+  border-left: 2px solid lightgrey;
+  height: 150px;
+  width: 95vw;
+  margin: auto;
+  /* box-shadow: 5px 5px 5px grey; */
+  
+}
+
+.input-button {
+  
+  height: 40px;
+  width: 80px;
+  border-radius: 8px;
+  border: none;
+  font-size: 15px;
+  font-weight: 100;
+  margin-right: 20px;
+}
+
+h3 {
+  margin: 0;
+  text-align: left;
+  font-weight: 30;
+  
+}
+
+.button-input-container {
+  display: flex;
+  flex-direction:row;
+  justify-content: right;
+  
+}
+
+.input-box {
+  margin-right: 400px;
+  
+}
+
+.input-box:visited{
+  border-bottom: 2px solid light blue;
+  border-top: none;
+  border-right: none;
+  border-left: none;
+  
+}
+.input {
+  width: 200px;
+  height: 30px;
+  border-bottom: 2px solid light grey;
+  border-top: none;
+  border-right: none;
+  border-left: none;
+}
+
+
+.review-container {
+  font-size: larger;
+  border: 2px solid light grey;
+  
+}
+
+.review-row {
+  padding: 25px;
+}
+
+.feedback-header {
+  border: 2px solid black;
+  width: 95vw;
+  margin: auto;
+  margin-top: 40px;
+}
+
+.feedback-body {
+  border: 2px solid black;
+  width: 95vw;
+  margin: auto;
+  height:40vh;
+  margin-top: 40px;
+  padding-top: 250px;
+}
+
+.new-feedback-button {
+  width: 300px;
+  height: 50px;
+  color: white;
+  background-color: rgb(47, 133, 246);
+  border-radius: 5px;
+  border: none;
+  font-size: large;
+  box-shadow: 5px 5px 5px  grey;
+}

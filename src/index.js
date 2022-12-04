@@ -10,7 +10,6 @@ import logger from 'redux-logger';
 
 const FeelingsReducer = (state = '', action) => {
   if (action.type === 'NEW_FEELING') {
-    console.log('feelingReducer', action.payload);
     return action.payload;
   }else if(action.type === 'CLEAR') {
     return '';

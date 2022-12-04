@@ -9,37 +9,35 @@ function UserReview() {
   const comment = useSelector(store => store.CommentReducer)
   const history = useHistory();
     
-  console.log("comment:", comment)  
 
-const reviewObject = {
-  feeling: feelings,
-  understanding: understanding,
-  support: support,
-  comments: comment
-}
+  const reviewObject = {
+    feeling: feelings,
+    understanding: understanding,
+    support: support,
+    comments: comment
+  }
 
-    const navigateNext = () => {
-      history.push('/SubmitSucces');
-      axios.post('/review', reviewObject)   
+  const navigateNext = () => {
+    history.push('/SubmitSucces');
+    axios.post('/review', reviewObject)   
     .then(response => {
-      console.log("axios.post", response)
-      
+      console.log('succesfull POST', response)
     }).catch(err => {
-      console.log("axios.post-err", err);
+      console.log('error posting', err)
     })              
   };
 
 
-    return (
-      <div>
-        <div>Review Your Feedback</div>
-        <div>Feelings: {feelings}</div>
-        <div>Understanding: {understanding}</div>
-        <div>Support: {support}</div>
-        <div>Comments: {comment}</div>
-        <button onClick={navigateNext}>Next</button>
-      </div>
-    )
+  return (
+    <div className='review-container'>
+      <h2>Review Your Feedback</h2>
+      <div className="review-row">Feelings: {feelings}</div>
+      <div className="review-row">Understanding: {understanding}</div>
+      <div className="review-row">Support: {support}</div>
+      <div className="review-row">Comments: {comment}</div>
+      <button className='input-button' onClick={navigateNext}>SUBMIT</button>
+    </div>
+  )
 }
 
 export default UserReview;

@@ -12,8 +12,13 @@ function SubmitSucces() {
     };
     return (
         <div>
-        <div>Succes!</div>
-        <button onClick={navigateNext}>Leave New Feedback</button>
+        <header className='feedback-header'>
+          <h1>Feedback!</h1>
+        </header>
+        <div className='feedback-body'>
+          <h1>Thank You!</h1>
+          <button className='new-feedback-button' onClick={navigateNext}>Leave New Feedback</button>
+        </div>
       </div>
     )
 }

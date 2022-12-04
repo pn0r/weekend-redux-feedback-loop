@@ -21,14 +21,21 @@ function UserUnderstanding() {
 
     return (
       <div>
-        <Header />
-        <div>How well are you understanding the content?</div>
-        <input type="number" min ="1" max="5" 
-        onChange={(event) => setUnderstanding(event.target.value)}>
-        </input>
-        <button onClick={navigateNext}>Next</button>
-      </div>
-    )
-}
+       <Header />
+       <div className='input-container'>
+         <h1>How well are you understanding the content?</h1>
+           <div className='button-input-container'>
+             <div className='input-box'>
+             <h3>Understanding</h3>
+               <input className='input' type="number" min ="1" max="5" 
+               onChange={(event) => setUnderstanding(event.target.value)}>
+               </input>
+           </div>
+           <button className='input-button' onClick={navigateNext}>NEXT</button>
+         </div>
+         </div>
+       </div>
+   )
+ }
 
 export default UserUnderstanding;

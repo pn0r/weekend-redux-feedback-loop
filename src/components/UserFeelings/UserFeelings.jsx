@@ -22,11 +22,18 @@ function UserFeelings() {
     return (
       <div>
         <Header />
-        <div>How Are You Feeling Today?</div>
-        <input type="number" min ="1" max="5" 
-        onChange={(event) => setFeeling(event.target.value)}>
-        </input>
-        <button onClick={navigateNext}>Next</button>
+          <div className='input-container'>
+          <h1>How Are You Feeling Today?</h1>
+            <div className='button-input-container'>
+              <div className='input-box'>
+                <h3>Feelings</h3>
+              <input className='input' type="number" min ="1" max="5" 
+              onChange={(event) => setFeeling(event.target.value)}>
+              </input>
+              </div>
+            <button className='input-button' onClick={navigateNext}>NEXT</button>
+            </div>
+          </div>
       </div>
     )
 }
