@@ -5,8 +5,6 @@ const pool = require('../modules/pool');
 router.post('/', (req, res) => {
     const review = req.body
 
-    
-
     const sqlText = `INSERT INTO feedback (feeling, understanding, support, comments)
     VALUES ($1, $2, $3, $4)`;
 

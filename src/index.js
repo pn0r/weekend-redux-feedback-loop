@@ -12,30 +12,35 @@ const FeelingsReducer = (state = '', action) => {
   if (action.type === 'NEW_FEELING') {
     console.log('feelingReducer', action.payload);
     return action.payload;
+  }else if(action.type === 'CLEAR') {
+    return '';
   }
     return state;
 } 
 
 const UnderstandingReducer = (state = '', action) => {
   if (action.type === 'NEW_UNDERSTANDING') {
-    console.log('understandingReducer', action.payload);
     return action.payload;
+  }else if(action.type === 'CLEAR') {
+    return '';
   }
     return state;
 } 
 
 const SupportReducer = (state = '', action) => {
   if (action.type === 'NEW_SUPPORT') {
-    console.log('supportReducer', action.payload);
     return action.payload;
+  }else if(action.type === 'CLEAR') {
+    return '';
   }
     return state;
 } 
 
 const CommentReducer = (state = '', action) => {
   if (action.type === 'NEW_COMMENT') {
-    console.log('commentReducer', action.payload);
     return action.payload;
+  }else if(action.type === 'CLEAR') {
+    return '';
   }
     return state;
 } 
